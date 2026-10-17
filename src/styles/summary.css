@@ -1,0 +1,18 @@
+/* Summary and lens */
+.band { border-top: 1px solid var(--line); padding-block: clamp(2rem, 5vw, 3.5rem); }
+.band h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem 2rem; margin-top: 1.5rem; }
+.facts div { min-width: 0; }
+.facts dt { font: 500 0.75rem var(--mono); text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent); margin-bottom: 0.4rem; }
+.facts dd { margin: 0; }
+.facts dl { display: contents; }
+.lens { margin-top: 2.5rem; }
+.tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.tab { appearance: none; cursor: pointer; background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 0.6rem 0.95rem; font: 500 0.9rem var(--body); }
+.tab:hover { border-color: var(--accent); }
+.tab[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.jumps { margin-top: 1rem; max-width: 760px; }
+.jumps li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding: 0.8rem 0; border-top: 1px solid var(--line); }
+.jumps li:last-child { border-bottom: 1px solid var(--line); }
+.jumps li span { min-width: 0; flex: 1 1 22rem; }
+.link { appearance: none; background: none; border: 0; padding: 0; color: var(--accent); font: 600 0.88rem var(--body); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-align: left; }

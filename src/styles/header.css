@@ -1,0 +1,20 @@
+/* Header and progress */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; gap: 1rem; min-height: 56px; }
+.brand { font: 700 1rem/1 var(--display); letter-spacing: -0.01em; white-space: nowrap; color: var(--ink); text-decoration: none; }
+.nav { flex: 1; min-width: 0; display: flex; gap: 0.25rem; overflow-x: auto; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { white-space: nowrap; text-decoration: none; color: var(--muted); font: 500 0.78rem/1 var(--mono); padding: 1.1rem 0.6rem 1rem; border-bottom: 2px solid transparent; }
+.nav a:hover { color: var(--ink); }
+.nav a[aria-current="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.icon-btn { flex: none; background: none; border: 1px solid var(--line); color: var(--ink); width: 36px; height: 36px; border-radius: 6px; cursor: pointer; font: 500 0.9rem var(--mono); }
+.icon-btn:hover { border-color: var(--accent); }
+.progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: transparent; }
+.progress span { display: block; height: 100%; width: var(--p, 0%); background: var(--accent); }
+.b-short { display: none; }
+@media (max-width: 560px) {
+  .b-full { display: none; }
+  .b-short { display: inline; }
+  .bar .wrap { gap: 0.5rem; }
+  .nav a { padding-inline: 0.45rem; font-size: 0.74rem; }
+}

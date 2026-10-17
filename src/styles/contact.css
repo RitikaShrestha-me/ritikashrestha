@@ -1,0 +1,15 @@
+/* Next */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem 2rem; margin-top: 1.5rem; }
+.cols h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+.cols p { color: var(--muted); }
+.contact { margin-top: 2.5rem; padding: clamp(1rem, 3vw, 1.75rem); background: var(--ink); color: var(--bg); border-radius: 10px; }
+.contact h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.contact .mail { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; margin-top: 1rem; }
+.contact code { font: 500 1rem var(--mono); user-select: all; word-break: break-all; }
+.contact .btn { background: var(--bg); color: var(--ink); border-color: var(--bg); }
+.contact .btn.ghost { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 55%, transparent); }
+.contact .quick a { color: var(--bg); }
+.copyblock { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--bg) 25%, transparent); }
+.copyblock pre { margin: 0.6rem 0 0; white-space: pre-wrap; word-break: break-word; font: 400 0.8rem/1.6 var(--mono); background: color-mix(in srgb, var(--bg) 10%, transparent); padding: 0.8rem; border-radius: 6px; user-select: all; }
+.status-line { font: 500 0.8rem var(--mono); min-height: 1.2rem; margin-top: 0.5rem; }
+footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; color: var(--muted); font: 400 0.8rem/1.6 var(--mono); }

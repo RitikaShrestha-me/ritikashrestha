@@ -1,0 +1,22 @@
+/* Education and experience */
+.sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem 2rem; }
+.sec-head > * { min-width: 0; }
+.sec-head .note { max-width: 34rem; color: var(--muted); }
+.edus { margin-top: 2rem; }
+.edu { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem 3rem; padding-block: clamp(1.75rem, 4vw, 2.75rem); border-top: 1px solid var(--line); }
+@media (min-width: 900px) { .edu { grid-template-columns: 17rem minmax(0, 1fr); } .edu-head { position: sticky; top: 5.5rem; align-self: start; } }
+.edu-head, .edu-built { min-width: 0; }
+.edu-head .yrs { font-size: clamp(2rem, 4.5vw, 2.7rem); }
+.edu-head h3 { font-size: 1.4rem; margin-top: 0.7rem; }
+.edu-school { margin-top: 0.4rem; font: 400 0.82rem/1.5 var(--mono); color: var(--muted); }
+.edu-grade { margin-top: 0.5rem; font-weight: 600; font-size: 0.93rem; color: var(--accent); }
+.edu-blurb { margin-top: 0.8rem; font-size: 0.93rem; line-height: 1.55; }
+.edu-built > .label { margin-bottom: 0.5rem; }
+.cwrap { min-width: 0; }
+.cctl { display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; }
+.ccount { font: 500 0.8rem var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; margin-right: 0.25rem; }
+.wcard.dim { opacity: 0.5; }
+.wcard.hit { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+#demoSlot .lab { margin-top: 0.5rem; }
+.dbody .glof { grid-template-columns: minmax(0, 1fr); }
+.dbody .pol-grid { grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }

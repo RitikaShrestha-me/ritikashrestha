@@ -1,0 +1,28 @@
+/* Chapters */
+.chap { border-top: 1px solid var(--line); }
+.chapter { padding-block: clamp(2.5rem, 6vw, 4.5rem); display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem 3rem; }
+@media (min-width: 900px) { .chapter { grid-template-columns: 11rem minmax(0, 1fr); } }
+.when { align-self: start; }
+@media (min-width: 900px) { .when { position: sticky; top: 5.5rem; } }
+.yrs { font: 800 clamp(2rem, 4.5vw, 2.7rem)/1 var(--display); letter-spacing: -0.03em; }
+.when .label { margin-top: 0.6rem; display: block; }
+.content { min-width: 0; }
+.content > h2 { font-size: clamp(1.7rem, 3.8vw, 2.5rem); max-width: 22ch; }
+.content > .prose { margin-top: 1rem; }
+.why { margin-top: 1.25rem; max-width: 65ch; padding-top: 0.9rem; border-top: 1px dashed var(--line); }
+.why b { font: 500 0.75rem var(--mono); text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent); display: block; margin-bottom: 0.3rem; }
+.roles { margin-top: 1.5rem; }
+.role { padding-block: 1.1rem; border-top: 1px solid var(--line); }
+.role:last-child { border-bottom: 1px solid var(--line); }
+.role h3 { font-size: 1.25rem; }
+.meta { font: 400 0.8rem/1.5 var(--mono); color: var(--muted); margin-top: 0.3rem; }
+.role ul { margin-top: 0.7rem; display: grid; gap: 0.45rem; max-width: 65ch; }
+.role li { padding-left: 1.1rem; position: relative; }
+.role li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 0.5rem; height: 2px; background: var(--accent); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+.tags span { font: 500 0.75rem var(--mono); padding: 0.2rem 0.5rem; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); }
+details { margin-top: 1.25rem; max-width: 65ch; }
+summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+details ul { margin-top: 0.6rem; display: grid; gap: 0.35rem; }
+details li { display: flex; flex-wrap: wrap; gap: 0 0.75rem; }
+details li span { color: var(--muted); font-size: 0.85rem; }

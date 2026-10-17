@@ -1,0 +1,19 @@
+/* Hero */
+.hero { padding-block: clamp(2rem, 6vw, 4.5rem) clamp(2rem, 5vw, 3.5rem); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; align-items: center; }
+@media (min-width: 860px) { .hero .wrap { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 3rem; } }
+.hero h1 { font-size: clamp(2.8rem, 8vw, 5.2rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.03em; margin-top: 1rem; }
+.hero .lead { font-size: clamp(1.05rem, 2.2vw, 1.25rem); line-height: 1.5; margin-top: 1.25rem; max-width: 36rem; }
+.status { display: inline-flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; align-items: center; margin-top: 1.5rem; padding: 0.55rem 0.85rem; border: 1px solid var(--accent); background: var(--accent-soft); border-radius: 4px; font: 500 0.82rem/1.4 var(--mono); color: var(--ink); }
+.status b { color: var(--accent); font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.btn { appearance: none; cursor: pointer; font: 600 0.95rem/1 var(--body); padding: 0.85rem 1.15rem; border-radius: 6px; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn.ghost:hover { background: var(--accent-soft); filter: none; }
+.quick { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin-top: 1.25rem; font: 500 0.82rem var(--mono); }
+.portrait { margin: 0; width: 100%; max-width: 380px; justify-self: center; aspect-ratio: 4 / 5; border-radius: 12px; overflow: hidden; background: var(--accent-soft); border: 1px solid var(--line); }
+.portrait img, .portrait svg { width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; display: block; }
+.portrait .mono-bg { fill: var(--accent-soft); }
+.portrait .mono-tx { fill: var(--accent); font: 800 150px var(--display); letter-spacing: -6px; }
+@media (max-width: 859px) { .portrait img { transform: scale(1.7); transform-origin: 52% 42%; } .portrait { order: -1; width: 112px; max-width: 112px; aspect-ratio: 1 / 1; border-radius: 50%; justify-self: start; } }

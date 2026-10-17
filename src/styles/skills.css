@@ -1,0 +1,11 @@
+/* Skills */
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+.skill { appearance: none; cursor: pointer; font: 500 0.85rem var(--mono); padding: 0.45rem 0.7rem; border-radius: 4px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+.skill:hover { border-color: var(--accent); }
+.skill[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.skill.quiet { background: transparent; color: var(--muted); cursor: default; border-style: dashed; }
+.skill-out { margin-top: 1rem; min-height: 3rem; max-width: 70ch; }
+.skill-out .link { margin-right: 1rem; }
+.sgroups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1.5rem 2rem; margin-top: 1.5rem; }
+.sgroup { min-width: 0; }
+.sgroup .chips { margin-top: 0.5rem; }
