@@ -1,11 +1,6 @@
 /* Summary and lens */
 .band { border-top: 1px solid var(--line); padding-block: clamp(2rem, 5vw, 3.5rem); }
 .band h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); }
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem 2rem; margin-top: 1.5rem; }
-.facts div { min-width: 0; }
-.facts dt { font: 500 0.75rem var(--mono); text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent); margin-bottom: 0.4rem; }
-.facts dd { margin: 0; }
-.facts dl { display: contents; }
 .lens { margin-top: 2.5rem; }
 .tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
 .tab { appearance: none; cursor: pointer; background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 0.6rem 0.95rem; font: 500 0.9rem var(--body); }
@@ -16,3 +11,33 @@
 .jumps li:last-child { border-bottom: 1px solid var(--line); }
 .jumps li span { min-width: 0; flex: 1 1 22rem; }
 .link { appearance: none; background: none; border: 0; padding: 0; color: var(--accent); font: 600 0.88rem var(--body); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-align: left; }
+
+/* 60-second timeline */
+.journey { list-style: none; position: relative; margin: 2rem 0 0; padding: 0 0 0 1.9rem; display: grid; gap: 1rem; --rail: 100%; }
+.journey::before, .journey::after { content: ""; position: absolute; left: 0.4rem; top: 0.9rem; width: 2px; border-radius: 1px; }
+.journey::before { bottom: 0.9rem; background: var(--line); }
+.journey::after { height: calc((100% - 1.8rem) * var(--rail) / 100%); background: var(--accent); transition: height 1.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.journey.armed { --rail: 0%; }
+.stop { position: relative; min-width: 0; padding: 1.1rem 1.2rem 1.2rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; display: flex; flex-direction: column; gap: 0.35rem; }
+.stop::before { content: ""; position: absolute; left: -1.9rem; top: 1.25rem; width: 0.9rem; height: 0.9rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+.stop.current::before { background: var(--accent); animation: stop-pulse 2.4s ease-out infinite; }
+.stop-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.15rem 0.75rem; }
+.stop-head .label { color: var(--accent); }
+.stop-period { font: 400 0.75rem var(--mono); color: var(--muted); }
+.stop .fig { margin-top: 0.4rem; font: 800 clamp(2.1rem, 4.2vw, 2.8rem)/1 var(--display); letter-spacing: -0.03em; color: var(--ink); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.stop .cap { font: 500 0.78rem/1.4 var(--mono); color: var(--muted); }
+.stop-body { margin-top: 0.5rem; font-size: 0.93rem; line-height: 1.55; }
+.stop .link { margin-top: auto; padding-top: 0.7rem; }
+.journey.armed .stop { opacity: 0; transform: translateY(16px); }
+.journey.in .stop { opacity: 1; transform: none; transition: opacity 0.6s ease, transform 0.6s ease; transition-delay: calc(var(--i) * 140ms); }
+@keyframes stop-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 10px transparent; }
+}
+@media (min-width: 980px) {
+  .journey { grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 2.4rem 0 0; gap: 1.25rem; }
+  .journey::before, .journey::after { top: 0.55rem; left: 0; height: 2px; width: auto; }
+  .journey::before { right: 0; bottom: auto; }
+  .journey::after { width: calc(100% * var(--rail) / 100%); height: 2px; transition: width 1.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .stop::before { left: 1.2rem; top: -2.4rem; }
+}

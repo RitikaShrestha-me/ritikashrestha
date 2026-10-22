@@ -73,3 +73,22 @@ export interface PipelineStageRecord {
   s: string;
   d: string;
 }
+
+/** Where a link on the page goes: open a case study, or scroll to a section. */
+export type NavigationAction = { type: "open"; id: string } | { type: "jump"; id: string };
+
+export type JourneyFigure =
+  | { kind: "count"; value: number; decimals: number; suffix: string }
+  | { kind: "text"; text: string };
+
+export interface JourneyStopRecord {
+  id: string;
+  label: string;
+  period: string;
+  figure: JourneyFigure;
+  caption: string;
+  body: string;
+  cta: { label: string; action: NavigationAction };
+  /** The stop that describes where I am right now. It gets a pulsing marker. */
+  current?: boolean;
+}

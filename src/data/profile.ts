@@ -6,7 +6,7 @@ export const PROFILE = {
 	description:
 		"Master's student in data science and network intelligence. IoT data pipelines, machine-learning wireless scheduling and production frontends.",
 	eyebrow: "Data science · AI · intelligent systems",
-	lead: "Master's student in data science and network intelligence. I build reliable data systems and practical AI, after more than two years shipping production software.",
+	lead: "I use data and software to solve real-world problems. Master’s student in Data Science and Network Intelligence at Télécom SudParis, with 2+ years of experience building production systems.",
 	availability: {
 		role: "PFE, 6 months from February 2027",
 		field: "Data / AI engineering",
@@ -24,25 +24,6 @@ export const PROFILE = {
 	footer:
 		"Ritika Shrestha · Data science and AI · The demos on this page run in your browser. Data in the GLOF prototype is simulated.",
 } as const;
-
-export const SUMMARY_FACTS: ReadonlyArray<{ title: string; body: string }> = [
-	{
-		title: "Now",
-		body: "M2 Data Science and Network Intelligence at Télécom SudParis (Institut Polytechnique de Paris). M.Eng in IoT Systems Engineering at the Asian Institute of Technology, first-year Grade A (3.94/4), HM King's Scholarship recipient.",
-	},
-	{
-		title: "Before",
-		body: "Frontend and software roles from 2021 to 2025 at three companies, including a US health-insurance platform serving 450K+ users.",
-	},
-	{
-		title: "Built",
-		body: "An IoT flood early-warning pipeline, an IoT monitoring platform, and a machine-learning wireless scheduler that reproduces Proportional Fair decisions with 92.95% accuracy.",
-	},
-	{
-		title: "Next",
-		body: "A 6-month end-of-studies internship (PFE) from February 2027 in France, working on data and AI systems that have to run reliably.",
-	},
-];
 
 export const NEXT_PITCHES: ReadonlyArray<{ title: string; body: string }> = [
 	{

@@ -1,4 +1,4 @@
-import { SUMMARY_FACTS } from "@/data/profile";
+import { JourneySummary } from "./JourneySummary";
 import { LensTabs } from "./LensTabs";
 
 export function Summary() {
@@ -6,14 +6,10 @@ export function Summary() {
     <section className="band" id="summary">
       <div className="wrap">
         <h2>The 60-second version</h2>
-        <dl className="facts">
-          {SUMMARY_FACTS.map((fact) => (
-            <div key={fact.title}>
-              <dt>{fact.title}</dt>
-              <dd>{fact.body}</dd>
-            </div>
-          ))}
-        </dl>
+        <p className="prose" style={{ marginTop: ".6rem" }}>
+          Four stops, from the first job to the internship I am looking for.
+        </p>
+        <JourneySummary />
         <LensTabs />
       </div>
     </section>
